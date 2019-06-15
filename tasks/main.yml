@@ -6,3 +6,10 @@
     name: docker.io
     state: present
 
+- name: Add users to docker group
+  user:
+    user: "{{ item }}"
+    append: true
+    groups: 
+      - docker
+  with_items: "{{ docker_users }}"
