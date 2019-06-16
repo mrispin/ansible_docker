@@ -10,9 +10,11 @@ def test_docker_installed(host):
     docker = host.package("docker.io")
     assert docker.is_installed
 
+
 def test_docker_group(host):
     dockergroup = host.group("docker")
     assert dockergroup.exists
+
 
 def test_docker_service(host):
     dockerservice = host.service("docker")
