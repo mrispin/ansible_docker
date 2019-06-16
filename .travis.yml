@@ -6,18 +6,11 @@ env:
   global:
     - ROLE_NAME: docker
   matrix:
-#    - MOLECULE_DISTRO: centos7
     - MOLECULE_DISTRO: ubuntu1804
 
 install:
   - pip install molecule docker
-                                                        
-before_script:
-                                                        
-                                                        
+
 script:
-# Run tests.
   - molecule test
-                                                        
-notifications:
-#  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+

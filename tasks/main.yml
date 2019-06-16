@@ -10,6 +10,6 @@
   user:
     user: "{{ item }}"
     append: true
-    groups: 
+    groups:
       - docker
   with_items: "{{ docker_users }}"
