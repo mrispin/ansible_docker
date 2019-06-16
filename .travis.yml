@@ -1,7 +1,6 @@
 ---
 language: python
 services: docker
-
 env:
   global:
     - ROLE_NAME: docker
@@ -13,4 +12,3 @@ install:
 
 script:
   - molecule test
-
