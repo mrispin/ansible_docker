@@ -1,10 +1,11 @@
 ---
-# tasks file for docke
+# tasks file for docker
 
 - name: Install docker
   package:
     name: docker.io
     state: present
+  become: true
 
 - name: Add users to docker group
   user:
@@ -13,3 +14,4 @@
     groups:
       - docker
   with_items: "{{ docker_users }}"
+  become: true
