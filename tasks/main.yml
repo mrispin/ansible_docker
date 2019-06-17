@@ -7,6 +7,12 @@
     state: present
   become: true
 
+- name: Enable docker service
+  service:
+    name: docker
+    enabled: true
+    state: started
+
 - name: Add users to docker group
   user:
     user: "{{ item }}"
